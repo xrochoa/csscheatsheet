@@ -1,0 +1,22 @@
+{
+  "name": "css",
+  "description": "A css full reference",
+  "main": "gulpfile.js",
+  "authors": [
+    "Xavier Reyes Ochoa <xareyesochoa@gmail.com> (http://www.xaviro.com)"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "d3": "~3.5.13",
+    "bootstrap": "~3.3.6"
+  }
+}
