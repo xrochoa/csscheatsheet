@@ -1,0 +1,70 @@
+.legend {
+    background: #323333;
+    color: #f5f9fa;
+    .smaller {
+        vertical-align: bottom;
+    }
+}
+
+.row {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.property {
+    a {
+        color: #323333;
+        text-decoration: none;
+    }
+}
+
+.description,
+.syntax,
+.example {
+    font-size: 0.8em;
+}
+
+.circle {
+    border-radius: 50%;
+    display: inline-block;
+    margin: auto;
+    &.big {
+        width: 30px;
+        height: 30px;
+        padding: 5px;
+    }
+    &.small {
+        width: 20px;
+        height: 20px;
+        padding: 5px;
+    }
+    &.smaller {
+        width: 10px;
+        height: 10px;
+        background: #323333;
+    }
+}
+
+.animatable {
+    @extend .circle;
+    &.yes {
+        background: #8f40ff;
+    }
+}
+
+//left outside for legend
+.version {
+    @extend .circle;
+    &.version-1 {
+        background: #5fff40;
+    }
+    &.version-2 {
+        background: #ffcf40;
+    }
+    &.version-3 {
+        background: #ff5040;
+    }
+}
+
+.shorthand {
+    vertical-align: top;
+}

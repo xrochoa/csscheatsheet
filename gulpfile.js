@@ -176,6 +176,12 @@ gulp.task('html', function() {
 
 });
 
+//Copy files from resources folder
+gulp.task('res', function() {
+    gulp.src('src/res/**/*')
+        .pipe(gulp.dest('dist/res'));
+});
+
 //Watches Files For Changes
 gulp.task('watch', function() {
     livereload.listen();
@@ -183,6 +189,7 @@ gulp.task('watch', function() {
     gulp.watch('src/scss/**/*.scss', ['css']);
     gulp.watch('src/**/*.html', ['html']);
     gulp.watch('src/img/**/*', ['img']);
+    gulp.watch('src/res/**/*', ['res']);
 });
 
 //Node server start
@@ -194,5 +201,5 @@ gulp.task('server', function() {
 
 // Default Task
 gulp.task('default', function() {
-    runSequence('clean', 'lintjs', 'bundlejs', 'css', 'html', 'img', 'watch', 'server');
+    runSequence('clean', 'lintjs', 'bundlejs', 'css', 'html', 'img', 'res', 'watch', 'server');
 });
