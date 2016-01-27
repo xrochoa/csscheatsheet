@@ -1,7 +1,7 @@
 {
-  "name": "css",
+  "name": "csscheatsheet",
   "version": "1.0.0",
-  "description": "A css full reference",
+  "description": "A css cheat sheet",
   "main": "gulpfile.js",
   "directories": {
     "test": "tests"

@@ -1,2 +1,2 @@
-# css
-###### Scafolded by Xavi Ro
+# csscheatsheet
+###### by Xavi Ro
