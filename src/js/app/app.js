@@ -29,17 +29,25 @@ function populate(data) {
         });
 
     row.append('div')
-        .attr('class', 'col-xs-3 property')
+        .attr('class', 'col-xs-2 property')
         .html(function() {
-            return '<a href="http://www.caniuse.com/#search=' + data.Property + '">' + data.Property + '</a>';
+            if (data.Shorthand === 'X' || data.Shorthand === '') {
+                return '<a href="http://www.caniuse.com/#search=' + data.Property + '">' + data.Property + '</a>';
+            } else {
+                return '<a href="http://www.caniuse.com/#search=' + data.Property + '"> - ' + data.Property + '</a>';
+            }
         });
 
     row.append('div')
-        .attr('class', 'col-xs-4 description')
+        .attr('class', 'col-xs-3 description')
         .text(data.Description);
 
     row.append('div')
-        .attr('class', 'col-xs-4 example')
+        .attr('class', 'col-xs-4 syntax')
+        .text(data.Syntax);
+
+    row.append('div')
+        .attr('class', 'col-xs-2 example')
         .text(data.Example);
 
     row.append('div')
